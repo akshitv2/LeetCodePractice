@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.HashMap;
+package leetcode.del;
 
 public class L002_Add_two_numbers {
     public static void main(String[] args) {

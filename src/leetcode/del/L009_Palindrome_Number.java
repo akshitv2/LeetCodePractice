@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.del;
 
 public class L009_Palindrome_Number {
     public static void main(String[] args) {

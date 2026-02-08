@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.del;
 
 public class L008_String_to_integer {
     public static void main(String[] args) {

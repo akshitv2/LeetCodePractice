@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.del;
 
 public class L005_Longest_Palindromic_substring {
     public static void main(String[] args) {
