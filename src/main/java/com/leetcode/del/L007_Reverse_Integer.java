@@ -1,4 +1,4 @@
-package leetcode.del;
+package com.leetcode.del;
 
 public class L007_Reverse_Integer {
     public static void main(String[] args) {

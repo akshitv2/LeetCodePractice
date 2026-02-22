@@ -1,4 +1,4 @@
-package leetcode.del;
+package com.leetcode.del;
 
 public class L011_Container_with_most_water {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package leetcode;
+package com.leetcode;
 
 public class L009_PALINDROME_NUMBER {
 

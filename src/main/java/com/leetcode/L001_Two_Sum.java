@@ -1,7 +1,8 @@
-package leetcode;
+package com.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class L001_Two_Sum {
 
@@ -9,7 +10,7 @@ public class L001_Two_Sum {
         int[] nums = {2,7,11,15};int target = 9;
 //        int[] nums = {3,3};int target = 6;
 
-        for(int i:twoSum(nums, target)){
+        for(int i: Objects.requireNonNull(twoSum(nums, target))){
             System.out.println(i);
         }
     }

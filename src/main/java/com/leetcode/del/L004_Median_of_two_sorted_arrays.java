@@ -1,4 +1,4 @@
-package leetcode.del;
+package com.leetcode.del;
 
 public class L004_Median_of_two_sorted_arrays {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package leetcode;
+package com.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,8 +9,7 @@ public class L002_ADD_TWO_NUMBERS {
 //        int[] num1 = {2, 4, 3}, num2 = {5, 6, 4};
         int[] num1 = {9,9,9,9,9,9,9}, num2 = {9,9,9,9};
 
-        ListNode output = (addTwoNumbers(createList(num1), createList(num2)));
-        ListNode idx = output;
+        ListNode idx = (addTwoNumbers(createList(num1), createList(num2)));
         while(idx!=null){
             System.out.print(idx.val);
             idx=idx.next;

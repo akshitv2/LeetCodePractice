@@ -1,4 +1,4 @@
-package leetcode.del;
+package com.leetcode.del;
 
 public class L006_Zigzag_conversion {
     public static void main(String[] args) {
