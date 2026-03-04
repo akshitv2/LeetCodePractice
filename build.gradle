@@ -1,6 +1,30 @@
 plugins {
     id 'java'
+//    id 'com.diffplug.spotless' version '8.2.1'
 }
 
 group = 'com.leetcode'
 version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+}
+
+//spotless {
+//    java {
+//        googleJavaFormat('1.17.0')
+//        trimTrailingWhitespace()
+//        endWithNewline()
+//    }
+
+//    format 'misc', {
+//        target '*.gradle', '*.md', '.gitignore'
+//
+//        trimTrailingWhitespace()
+//        indentWithSpaces(4)
+//        endWithNewline()
+//    }
