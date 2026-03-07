@@ -9,32 +9,36 @@ import static com.leetcode.COMMON.print;
 public class L016_3Sum_Closest {
 
     static void main() throws JsonProcessingException {
-        print(threeSumClosest(new int[]{-1, 0, 1, 2, -1, -4, 2},0));
-        print(threeSumClosest(new int[]{-1,2,1,-4},1));
-        print(threeSumClosest(new int[]{1,1,1,0},100));
+//        print(threeSumClosest(new int[]{-1, 0, 1, 2, -1, -4, 2},0));
+//        print(threeSumClosest(new int[]{-1,2,1,-4},1));
+//        print(threeSumClosest(new int[]{1,1,1,0},100));
+//        print(threeSumClosest(new int[]{1,2,0},3));
+        print(threeSumClosest(new int[]{2,3,8,9,10},16));
     }
 
     public static int threeSumClosest(int[] nums, int target) {
-        int start =0 ,end = nums.length-1;
-        int smallest = Integer.MAX_VALUE;
         Arrays.sort(nums);
-
-        while(start<end){
-            for(int i=start+1;i<end;i++){
-                System.out.println(nums[start] + "+" + nums[end] + "+" +  nums[i] + " = " +  (nums[start] + nums[end] + nums[i]));
-                int diff = (nums[start] + nums[end] + nums[i]) - target;
-                if(Math.abs(diff) < Math.abs(smallest)){
-                    smallest = diff;
+        print(nums);
+        int smallest = Integer.MAX_VALUE;
+        for(int i=0;i < nums.length-2;i++){
+            int start = i+1, end = nums.length-1;
+            while(start<end){
+                if(end == i){
+                    end--;
+                    continue;
                 }
-            }
-
-            if(Math.abs(nums[start]) > Math.abs(nums[end])){
-                start++;
-            }else if (Math.abs(nums[start]) < Math.abs(nums[end])) {
-                end --;
-            }else{
-                start++;
-                //todo add logic to compare next ones and move the smaller jump
+                int sum = nums[i] + nums[end] + nums[start] - target;
+//                System.out.println( nums[i] + " " + nums[start] + " " + nums[end] + " = " + sum);
+                if(Math.abs(sum) < Math.abs(smallest)){
+                    smallest = sum;
+                }
+                if(sum == 0){
+                    return target;
+                } else if (sum < 0) {
+                    start++;
+                } else{
+                    end--;
+                }
             }
         }
         return smallest + target;

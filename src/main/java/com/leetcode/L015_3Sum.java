@@ -10,13 +10,55 @@ import static com.leetcode.COMMON.print;
 public class L015_3Sum {
 
     static void main() throws JsonProcessingException {
-//        threeSum(new int[]{-1, 0, 1, 2, -1, -4});
-        print(threeSum(new int[]{-1, 0, 1, 2, -1, -4, 2}));
-        print(threeSum(new int[]{-1, 0, 1, 0}));
-        print(threeSum(new int[]{0, 1, 1}));
+        print(threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+//        print(threeSum(new int[]{-1, 0, 1, 2, -1, -4, 2}));
+        print(threeSum(new int[]{1,2,0,1,0,0,0,0}));
+//        print(threeSum(new int[]{-1, 0, 1, 0}));
+//        print(threeSum(new int[]{0, 1, 1}));
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> answer = new ArrayList<>();
+        Arrays.sort(nums);
+
+        for(int i=0;i< nums.length-2;i++){
+            if(nums[i] > 0){
+                return answer;
+            }
+            if(i != 0 && nums[i]==nums[i-1]){
+                continue;
+            }
+            int start = i, end = nums.length-1;
+            while(start<end){
+                if(start == i){
+                    start++;
+                    continue;
+                }
+                if(end == i){
+                    end--;
+                    continue;
+                }
+                if(nums[start] + nums[end] + nums[i] == 0){
+                    answer.add(Arrays.asList(nums[i],nums[start],nums[end]));
+                    int cur = nums[start];
+                    while(start < end && nums[start] == cur) {
+                        start++;
+                    }
+                    cur = nums[end];
+                    while(start < end && nums[end] == cur) {
+                        end--;
+                    }
+                } else if (nums[start] + nums[end] +nums[i] < 0) {
+                    start++;
+                } else{
+                    end--;
+                }
+            }
+        }
+        return answer;
+    }
+
+    public static List<List<Integer>> threeSumx(int[] nums) {
         List<List<Integer>> answer = new ArrayList<>();
         Map<Integer, Integer> hmap = new HashMap<>();
         Arrays.sort(nums);
