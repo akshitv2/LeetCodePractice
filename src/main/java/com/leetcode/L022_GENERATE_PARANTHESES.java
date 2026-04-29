@@ -2,12 +2,12 @@ package com.leetcode;
 
 import java.util.*;
 
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 public class L022_GENERATE_PARANTHESES {
 
     static void main() {
-        print(generateParenthesis(4));
+        COMMON.ezprint(generateParenthesis(4));
     }
 
 

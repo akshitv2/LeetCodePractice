@@ -1,9 +1,6 @@
 package com.leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 public class L024_SWAP_NODES_IN_PAIRS {
 

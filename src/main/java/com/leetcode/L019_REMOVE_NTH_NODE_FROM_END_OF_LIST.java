@@ -1,14 +1,8 @@
 package com.leetcode;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import static com.leetcode.COMMON.ezprint;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import static com.leetcode.COMMON.print;
-
-public class L0198_REMOVE_NTH_NODE_FROM_END_OF_LIST {
+public class L019_REMOVE_NTH_NODE_FROM_END_OF_LIST {
 
     public class ListNode {
         int val;

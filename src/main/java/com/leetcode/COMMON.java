@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class COMMON {
-    public static void print(Object object) {
+    public static void ezprint(Object object) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             System.out.println(objectMapper.writeValueAsString(object));
@@ -12,8 +12,8 @@ public class COMMON {
             System.out.println("Error parsing" + Object.class);
         }
     }
-    public static void print(String label, Object object) {
+    public static void ezprint(String label, Object object) {
         System.out.print(label);
-        print(object);
+        ezprint(object);
     }
 }

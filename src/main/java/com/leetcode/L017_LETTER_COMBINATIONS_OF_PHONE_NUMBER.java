@@ -1,14 +1,13 @@
 package com.leetcode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 public class L017_LETTER_COMBINATIONS_OF_PHONE_NUMBER {
     static void main() {
-        print(letterCombinations("234"));
+        COMMON.ezprint(letterCombinations("234"));
     }
 
     public static char[] getMappings(char digit) {

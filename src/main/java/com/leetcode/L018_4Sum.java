@@ -4,15 +4,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.*;
 
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 public class L018_4Sum {
 
     static void main() throws JsonProcessingException {
-        print(fourSum(new int[]{1,0,-1,0,-2,2}, 0));
-        print(fourSum(new int[]{2,2,2,2,2}, 8));
-        print(fourSum(new int[]{-2,-1,-1,1,1,2,2}, 0));
-        print(fourSum(new int[]{1000000000,1000000000,1000000000,1000000000}, -294967296));
+        COMMON.ezprint(fourSum(new int[]{1,0,-1,0,-2,2}, 0));
+        COMMON.ezprint(fourSum(new int[]{2,2,2,2,2}, 8));
+        COMMON.ezprint(fourSum(new int[]{-2,-1,-1,1,1,2,2}, 0));
+        COMMON.ezprint(fourSum(new int[]{1000000000,1000000000,1000000000,1000000000}, -294967296));
 //        print(threeSum(new int[]{-1, 0, 1, 2, -1, -4, 2}));
 //        print(threeSum(new int[]{-1, 0, 1, 0}));
 //        print(threeSum(new int[]{0, 1, 1}));
@@ -21,7 +21,7 @@ public class L018_4Sum {
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> answer = new ArrayList<>();
         Arrays.sort(nums);
-        print(nums);
+        COMMON.ezprint(nums);
 
         for(int j=0;j< nums.length-3;j++) {
             if(j!=0 && nums[j] == nums[j-1]) {

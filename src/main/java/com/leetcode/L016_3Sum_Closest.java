@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.*;
 
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 public class L016_3Sum_Closest {
 
@@ -13,12 +13,12 @@ public class L016_3Sum_Closest {
 //        print(threeSumClosest(new int[]{-1,2,1,-4},1));
 //        print(threeSumClosest(new int[]{1,1,1,0},100));
 //        print(threeSumClosest(new int[]{1,2,0},3));
-        print(threeSumClosest(new int[]{2,3,8,9,10},16));
+        COMMON.ezprint(threeSumClosest(new int[]{2,3,8,9,10},16));
     }
 
     public static int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
-        print(nums);
+        COMMON.ezprint(nums);
         int smallest = Integer.MAX_VALUE;
         for(int i=0;i < nums.length-2;i++){
             int start = i+1, end = nums.length-1;

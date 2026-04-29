@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 
 public class StreamsTest {
@@ -17,40 +17,40 @@ public class StreamsTest {
 
         ArrayList<String> stringArrayList = new ArrayList<>(List.of("Hi", "Hello", "Bye", "Hi"));
 //        ArrayList<String> stringArrayList = new ArrayList<>();
-        print("Original Arr: ", stringArrayList);
+        ezprint("Original Arr: ", stringArrayList);
 
         //TERMINAL OPERATIONS (with sorting)
         //To array
-        print("CAST LIST: ", stringArrayList.stream().sorted().toArray());
+        ezprint("CAST LIST: ", stringArrayList.stream().sorted().toArray());
 
         // casts to list
-        print("CAST LIST: ", stringArrayList.stream().sorted().toList());
+        ezprint("CAST LIST: ", stringArrayList.stream().sorted().toList());
 
         // casts to list
-        print("CAST LIST: ", stringArrayList.stream().sorted().collect(Collectors.toList()));
+        ezprint("CAST LIST: ", stringArrayList.stream().sorted().collect(Collectors.toList()));
 
         //for each
-        stringArrayList.forEach(word -> print("For each: ", word));
+        stringArrayList.forEach(word -> ezprint("For each: ", word));
 
         //reduce
         //NOTE: UNSAFE THIS WAY
-        print("REDUCE LIST: ", stringArrayList.stream().map(String::length).reduce(Integer::sum).get());
+        ezprint("REDUCE LIST: ", stringArrayList.stream().map(String::length).reduce(Integer::sum).get());
 
         //Intermediate Operations
         //filter
-        print("FILTERED LIST: ", stringArrayList.stream().filter(word -> word.startsWith("H")).toList());
+        ezprint("FILTERED LIST: ", stringArrayList.stream().filter(word -> word.startsWith("H")).toList());
         //map
-        print("MAPPED LIST: ", stringArrayList.stream().map(String::length).toList());
+        ezprint("MAPPED LIST: ", stringArrayList.stream().map(String::length).toList());
         //sorting
-        print("SORTED LIST: ", stringArrayList.stream().sorted().toList());
+        ezprint("SORTED LIST: ", stringArrayList.stream().sorted().toList());
         //distinct
-        print("DISTINCT LIST: ", stringArrayList.stream().distinct().toList());
+        ezprint("DISTINCT LIST: ", stringArrayList.stream().distinct().toList());
 
         List<List<String>> complexList = Arrays.asList(Arrays.asList("a", "b"), Arrays.asList("c", "d"), Arrays.asList("e", "f"));
 
         // Map would result in a Stream<List<String>>
         // flatMap results in a Stream<String>
-        print("FLATMAP : " , complexList.stream().flatMap(Collection::stream) // Flattening the List<String> into a Stream<String>
+        ezprint("FLATMAP : " , complexList.stream().flatMap(Collection::stream) // Flattening the List<String> into a Stream<String>
                 .collect(Collectors.toList()));
 
         //peek
@@ -65,6 +65,6 @@ public class StreamsTest {
         System.out.println("Final List: " + result);
 
         //Parallel Stream
-        print("PARALLEL OP: " , stringArrayList.parallelStream().sorted().toList());
+        ezprint("PARALLEL OP: " , stringArrayList.parallelStream().sorted().toList());
     }
 }

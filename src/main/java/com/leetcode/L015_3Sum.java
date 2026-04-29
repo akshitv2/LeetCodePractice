@@ -3,16 +3,15 @@ package com.leetcode;
 import java.util.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static com.leetcode.COMMON.print;
+import static com.leetcode.COMMON.ezprint;
 
 public class L015_3Sum {
 
     static void main() throws JsonProcessingException {
-        print(threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+        COMMON.ezprint(threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
 //        print(threeSum(new int[]{-1, 0, 1, 2, -1, -4, 2}));
-        print(threeSum(new int[]{1,2,0,1,0,0,0,0}));
+        COMMON.ezprint(threeSum(new int[]{1,2,0,1,0,0,0,0}));
 //        print(threeSum(new int[]{-1, 0, 1, 0}));
 //        print(threeSum(new int[]{0, 1, 1}));
     }
