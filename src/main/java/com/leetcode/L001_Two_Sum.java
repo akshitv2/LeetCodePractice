@@ -5,20 +5,26 @@ import java.util.Map;
 import java.util.Objects;
 
 public class L001_Two_Sum {
+    /*
+    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+    You may assume that each input would have exactly one solution, and you may not use the same element twice.
+     */
 
     static void main() {
-        int[] nums = {2,7,11,15};int target = 9;
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
 //        int[] nums = {3,3};int target = 6;
 
-        for(int i: Objects.requireNonNull(twoSum(nums, target))){
+        for (int i : Objects.requireNonNull(twoSum(nums, target))) {
             System.out.println(i);
         }
     }
+
     public static int[] twoSum(int[] nums, int target) {
-        Map<Integer,Integer> hmap = new HashMap<Integer,Integer>();
-        for(int i=0;i<nums.length;i++){
+        Map<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+        for (int i = 0; i < nums.length; i++) {
             int diff = target - nums[i];
-            if(hmap.get(diff)!=null){
+            if (hmap.get(diff) != null) {
                 return new int[]{i, hmap.get(diff)};
             }
             hmap.put(nums[i], i);

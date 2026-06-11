@@ -6,6 +6,8 @@ public class L005_LONGEST_PALINDROMIC_SUBSTRING {
         System.out.println(longestPalindrome("abba"));
     }
 
+
+
     public static boolean isPalindrome(String s, int start, int end) {
         if (s == null || start < 0 || end >= s.length() || start > end) {
             return false;
@@ -67,5 +69,19 @@ public class L005_LONGEST_PALINDROMIC_SUBSTRING {
             }
         }
         return s.substring(start, end);
+    }
+
+
+    public static String longestPalindromic(String s){
+        int n = s.length();
+        char[] sx = s.toCharArray();
+        int span = 1;
+
+        for(int i=1;i<n;i++){
+            if(sx[i + span])
+
+
+
+        }
     }
 }
